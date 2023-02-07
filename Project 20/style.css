@@ -1,0 +1,70 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Courier New', Courier, monospace;
+    height:100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    background: #0575e6;
+    background: -webkit-linear-gradient(
+        to bottom,
+        #021b79,
+        #0575e6
+    );
+    background: linear-gradient(to bottom, #021b79,#0575e6);
+}
+img{
+    max-width: 100%;
+}
+h1{
+    font-size: 52px;;
+    text-align: center;
+    color:#ffcc66;
+    text-shadow: 1px 1px 0 red;
+    margin: 0px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .spiderman{
+    width: 300px;
+    vertical-align: top;
+    margin-top: -60px;
+    animation-name: animar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.shadow{
+    width: 200px;
+    height: 20px;
+    margin: 20px 0;
+    margin-left: 20px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    animation: sombra 2s alternate infinite;
+}
+@keyframes animar {
+    from {
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes sombra {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.6);
+        opacity: 0.2;
+    }
+}
